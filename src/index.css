@@ -31,13 +31,13 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px 0 0; }
+  padding: 8px 16px 8px 8px; }
   .home-page .container .track-card .left-container {
     display: flex;
     align-items: center;
     flex-direction: row; }
     .home-page .container .track-card .left-container .album-artwork {
-      max-height: 150px; }
+      max-height: 120px; }
     .home-page .container .track-card .left-container .track-name {
       font-size: 28px;
       font-weight: 500;
