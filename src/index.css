@@ -24,20 +24,20 @@ body {
   text-transform: uppercase; }
 .home-page .container .track-card {
   color: #263238;
-  padding: 16px;
   border-top: 1px solid;
   border-color: #ECEFF1;
   cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 0 16px 0 0; }
   .home-page .container .track-card .left-container {
     display: flex;
     align-items: center;
     flex-direction: row; }
     .home-page .container .track-card .left-container .album-artwork {
-      max-height: 100px; }
+      max-height: 150px; }
     .home-page .container .track-card .left-container .track-name {
       font-size: 28px;
       font-weight: 500;

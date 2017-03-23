@@ -35,7 +35,6 @@ body {
         }
         .track-card {
             color: #263238;
-            padding: 16px;
             border-top: 1px solid;
             border-color: #ECEFF1;
             cursor: pointer;
@@ -43,12 +42,13 @@ body {
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            padding: 0 16px 0 0;
             .left-container {
                 display: flex;
                 align-items: center;
                 flex-direction: row;
                 .album-artwork {
-                    max-height: 100px;
+                    max-height: 150px;
                 }
                 .track-name {
                     font-size: 28px;

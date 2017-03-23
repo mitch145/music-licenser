@@ -1,5 +1,6 @@
 import React from 'react'
 import Chip from 'material-ui/Chip';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export default class TrackCard extends React.Component {
     render() {
@@ -25,6 +26,8 @@ export default class TrackCard extends React.Component {
                         <Chip className="tag">Hardcore Rap</Chip>
                     </div>
                 </div>
+                <RaisedButton label="Purchase" primary={true}/>
+
             </div>
         )
     }
