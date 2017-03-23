@@ -69,17 +69,79 @@ body {
                 margin: 0;
                 padding: 0 0 0 12px;
             }
-            .tag-container{
+            .tag-container {
                 display: flex;
                 flex-flow: row wrap;
                 justify-content: center;
-                .tag{
+                .tag {
                     margin: 5px !important;
                 }
             }
         }
         .track-card:hover {
             background-color: #FAFAFA;
+        }
+    }
+}
+
+.user-profile-page {
+    .profile-card {
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .profile-picture {
+            max-height: 200px;
+        }
+        .left-container {
+            max-width: 600px;
+            display: flex;
+            flex-direction: row;
+            .text-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .artist-name {
+                    font-size: 28px;
+                    font-weight: 500;
+                    margin: 0;
+                    padding: 0 0 0 12px;
+                }
+                .artist-bio {
+                    padding: 0 0 0 12px;
+                }
+            }
+        }
+    }
+}
+
+.artist-profile-page {
+    .profile-card {
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .profile-picture {
+            max-height: 200px;
+        }
+        .left-container {
+            max-width: 600px;
+            display: flex;
+            flex-direction: row;
+            .text-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .artist-name {
+                    font-size: 28px;
+                    font-weight: 500;
+                    margin: 0;
+                    padding: 0 0 0 12px;
+                }
+                .artist-bio {
+                    padding: 0 0 0 12px;
+                }
+            }
         }
     }
 }

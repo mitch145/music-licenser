@@ -62,4 +62,50 @@ body {
 .home-page .container .track-card:hover {
   background-color: #FAFAFA; }
 
+.user-profile-page .profile-card {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .user-profile-page .profile-card .profile-picture {
+    max-height: 200px; }
+  .user-profile-page .profile-card .left-container {
+    max-width: 600px;
+    display: flex;
+    flex-direction: row; }
+    .user-profile-page .profile-card .left-container .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .user-profile-page .profile-card .left-container .text-container .artist-name {
+        font-size: 28px;
+        font-weight: 500;
+        margin: 0;
+        padding: 0 0 0 12px; }
+      .user-profile-page .profile-card .left-container .text-container .artist-bio {
+        padding: 0 0 0 12px; }
+
+.artist-profile-page .profile-card {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .artist-profile-page .profile-card .profile-picture {
+    max-height: 200px; }
+  .artist-profile-page .profile-card .left-container {
+    max-width: 600px;
+    display: flex;
+    flex-direction: row; }
+    .artist-profile-page .profile-card .left-container .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .artist-profile-page .profile-card .left-container .text-container .artist-name {
+        font-size: 28px;
+        font-weight: 500;
+        margin: 0;
+        padding: 0 0 0 12px; }
+      .artist-profile-page .profile-card .left-container .text-container .artist-bio {
+        padding: 0 0 0 12px; }
+
 /*# sourceMappingURL=index.css.map */
