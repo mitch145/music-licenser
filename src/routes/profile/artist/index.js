@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default class HomePage extends React.Component {
+export default class ArtistProfilePage extends React.Component {
     render(){
         return(
             <div className="page">
-                <h1>Home</h1>
+                <h1>Artist Profile</h1>
             </div>
         )
     }

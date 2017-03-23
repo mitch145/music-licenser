@@ -95,7 +95,9 @@ export default class Sidebar extends React.Component {
                     docked={this.state.docked}>
                     <Divider/>
                     <MenuItem href="/#/" leftIcon={< ActionHome />}>Home</MenuItem>
-                    <MenuItem href="/#/test" leftIcon={< ActionHome />}>Test</MenuItem>
+                    <MenuItem href="/#/profile/user" leftIcon={< ActionHome />}>User Profile</MenuItem>
+                    <MenuItem href="/#/profile/artist" leftIcon={< ActionHome />}>Artist Profile</MenuItem>
+                    <MenuItem href="/#/track" leftIcon={< ActionHome />}>Track Profile</MenuItem>
                 </Drawer>
             </div>
         )

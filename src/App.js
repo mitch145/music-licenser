@@ -4,8 +4,11 @@ import Sidebar from './components/Sidebar'
 import {Router, Route, hashHistory} from 'react-router';
 
 // Routes
-import Home from './routes/home'
-import Test from './routes/test'
+import HomePage from './routes/home';
+import ArtistPage from './routes/profile/artist';
+import UserPage from './routes/profile/user';
+import TrackPage from './routes/track';
+
 
 class App extends Component {
   render() {
@@ -14,8 +17,10 @@ class App extends Component {
         <Sidebar/>
         <div className="pages">
           <Router history={hashHistory}>
-            <Route path='/' component={Home}/>
-            <Route path='/test' component={Test}/>
+            <Route path='/' component={HomePage}/>
+            <Route path='/profile/artist' component={ArtistPage}/>
+            <Route path='/profile/user' component={UserPage}/>
+            <Route path='/track' component={TrackPage}/>
           </Router>
         </div>
       </div>
