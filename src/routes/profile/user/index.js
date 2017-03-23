@@ -1,10 +1,13 @@
 import React from 'react'
+import Paper from 'material-ui/Paper';
 
 export default class UserProfilePage extends React.Component {
-    render(){
-        return(
+    render() {
+        return (
             <div className="page">
-                <h1>User Profile</h1>
+                <Paper>
+                    profile
+                </Paper>
             </div>
         )
     }

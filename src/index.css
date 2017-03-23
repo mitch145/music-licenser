@@ -7,7 +7,7 @@ body {
   padding-top: 64px; }
 
 .page {
-  padding: 20px; }
+  padding: 40px; }
 
 .appbar .button {
   color: #FFFFFF !important;
@@ -22,13 +22,44 @@ body {
   font-size: 14px;
   font-weight: 100;
   text-transform: uppercase; }
-.home-page .container .track {
+.home-page .container .track-card {
   color: #263238;
-  padding: 24px;
+  padding: 16px;
   border-top: 1px solid;
   border-color: #ECEFF1;
-  cursor: pointer; }
-.home-page .container .track:hover {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+  .home-page .container .track-card .left-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row; }
+    .home-page .container .track-card .left-container .album-artwork {
+      max-height: 100px; }
+    .home-page .container .track-card .left-container .track-name {
+      font-size: 28px;
+      font-weight: 500;
+      margin: 0;
+      padding: 0 0 0 12px; }
+    .home-page .container .track-card .left-container .artist-name {
+      font-size: 24px;
+      font-weight: 300;
+      margin: 0;
+      padding: 0 0 0 12px; }
+  .home-page .container .track-card .bpm {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 0 0 12px; }
+  .home-page .container .track-card .tag-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+    .home-page .container .track-card .tag-container .tag {
+      margin: 5px !important; }
+.home-page .container .track-card:hover {
   background-color: #FAFAFA; }
 
 /*# sourceMappingURL=index.css.map */
