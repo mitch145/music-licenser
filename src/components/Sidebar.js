@@ -2,12 +2,7 @@ import React from 'react';
 
 // Material UI Components
 import AppBar from 'material-ui/AppBar';
-import Drawer from 'material-ui/Drawer';
-import Divider from 'material-ui/Divider';
-import MenuItem from 'material-ui/MenuItem';
-
-// Nav Icons
-import ActionHome from 'material-ui/svg-icons/action/home';
+import FlatButton from 'material-ui/FlatButton';
 
 export default class Sidebar extends React.Component {
 
@@ -74,31 +69,33 @@ export default class Sidebar extends React.Component {
                 marginTop: 0
             }
         }
+        const rightButtons = (
+            <div>
+                <FlatButton
+                    className="button"
+                    label="Artist Profile (T)"
+                    href="/#/profile/artist"/>
+                <FlatButton className="button" label="Track (T)" href="/#/track"/>
+                <FlatButton className="button" label="Tracks" href="/#/"/>
+                <FlatButton className="button" label="My Profile" href="/#/profile/user"/>
+            </div>
+        )
         return (
             <div>
                 {this.state.mobile
                     ? <AppBar
+                            className="appbar"
                             title="Material UI Boilerplate"
                             style={style.appbar}
                             onLeftIconButtonTouchTap={this.toggleOpenDrawer}
                             iconClassNameRight="muidocs-icon-navigation-expand-more"/>
                     : <AppBar
+                        className="appbar"
                         title="Material UI Boilerplate"
                         style={style.appbar}
-                        showMenuIconButton={false}/>}
-                <Drawer
-                    containerStyle={style.drawer}
-                    overlayStyle={style.overlay}
-                    open={this.state.open}
-                    onRequestChange={(open) => this.setState({open})}
-                    width={200}
-                    docked={this.state.docked}>
-                    <Divider/>
-                    <MenuItem href="/#/" leftIcon={< ActionHome />}>Home</MenuItem>
-                    <MenuItem href="/#/profile/user" leftIcon={< ActionHome />}>User Profile</MenuItem>
-                    <MenuItem href="/#/profile/artist" leftIcon={< ActionHome />}>Artist Profile</MenuItem>
-                    <MenuItem href="/#/track" leftIcon={< ActionHome />}>Track Profile</MenuItem>
-                </Drawer>
+                        iconElementRight={rightButtons}
+                        showMenuIconButton={false}/>
+}
             </div>
         )
     }

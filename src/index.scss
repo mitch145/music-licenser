@@ -3,16 +3,22 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-
+// Global Styles
 .pages {
     padding-top: 64px;
-    @media(min-width: 768px) {
-        padding-left: 200px;
-    }
 }
 
 .page {
     padding: 20px
+}
+
+
+// Components Styles
+.appbar{
+    .button{
+        color: #FFFFFF !important;
+        margin-top: 5px !important;
+    }
 }
 
 .home-page {

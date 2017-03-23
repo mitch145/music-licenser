@@ -5,12 +5,13 @@ body {
 
 .pages {
   padding-top: 64px; }
-  @media (min-width: 768px) {
-    .pages {
-      padding-left: 200px; } }
 
 .page {
   padding: 20px; }
+
+.appbar .button {
+  color: #FFFFFF !important;
+  margin-top: 5px !important; }
 
 .home-page .container .header {
   background-color: #263238;
