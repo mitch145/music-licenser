@@ -4,6 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 export default class TrackCard extends React.Component {
     render() {
+        const handleTouchTap = () => {}
         return (
             <div className="track-card">
                 <div className="left-container">
@@ -16,14 +17,14 @@ export default class TrackCard extends React.Component {
                 <p className="bpm">120bpm</p>
                 <div>
                     <div className="tag-container">
-                        <Chip className="tag">West Coast Rap</Chip>
-                        <Chip className="tag">Latin Rap</Chip>
-                        <Chip className="tag">Text Chip</Chip>
+                        <Chip onTouchTap={handleTouchTap} className="tag">West Coast Rap</Chip>
+                        <Chip onTouchTap={handleTouchTap} className="tag">Latin Rap</Chip>
+                        <Chip onTouchTap={handleTouchTap} className="tag">Text Chip</Chip>
                     </div>
                     <div className="tag-container">
-                        <Chip className="tag">Gangsta Rap</Chip>
-                        <Chip className="tag">Alternative Rap</Chip>
-                        <Chip className="tag">Hardcore Rap</Chip>
+                        <Chip onTouchTap={handleTouchTap} className="tag">Gangsta Rap</Chip>
+                        <Chip onTouchTap={handleTouchTap} className="tag">Alternative Rap</Chip>
+                        <Chip onTouchTap={handleTouchTap} className="tag">Hardcore Rap</Chip>
                     </div>
                 </div>
                 <RaisedButton label="Purchase" primary={true}/>
