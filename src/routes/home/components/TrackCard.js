@@ -8,7 +8,7 @@ export default class TrackCard extends React.Component {
         return (
             <div className="track-card">
                 <div className="left-container">
-                    <img className="album-artwork" src="http://placehold.it/500x500"/>
+                    <img className="album-artwork" src="http://placehold.it/500x500" alt="Album"/>
                     <div>
                         <p className="track-name">Test 1234</p>
                         <p className="artist-name">Mitch Ball</p>
