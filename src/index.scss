@@ -1,5 +1,5 @@
 body {
-    background-color: #ecf0f1;
+    background-color: #424242;
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
@@ -23,8 +23,9 @@ body {
 
 .home-page {
     .container {
+        border-radius: 3px !important;
         .header {
-            background-color: #263238;
+            background-color: #252525;
             border-radius: 3px 3px 0 0;
             color: #FFFFFF;
             padding: 16px;
@@ -34,9 +35,10 @@ body {
             text-transform: uppercase;
         }
         .track-card {
-            color: #263238;
+            color: #FFFFFF;
+            background-color: #616161;
             border-top: 1px solid;
-            border-color: #ECEFF1;
+            border-color: #424242;
             cursor: pointer;
             display: flex;
             flex-direction: row;
@@ -79,7 +81,7 @@ body {
             }
         }
         .track-card:hover {
-            background-color: #FAFAFA;
+            background-color: #424242;
         }
     }
 }
@@ -90,6 +92,8 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        background-color: #616161 !important;
+        color: #ffffff !important;
         .profile-picture {
             max-height: 200px;
         }
@@ -121,6 +125,8 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        background-color: #616161 !important;
+        color: #ffffff !important;
         .profile-picture {
             max-height: 200px;
         }

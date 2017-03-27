@@ -27,7 +27,7 @@ export default class TrackCard extends React.Component {
                         <Chip onTouchTap={handleTouchTap} className="tag">Hardcore Rap</Chip>
                     </div>
                 </div>
-                <RaisedButton label="Purchase" primary={true}/>
+                <RaisedButton label="Purchase" secondary={true}/>
 
             </div>
         )
