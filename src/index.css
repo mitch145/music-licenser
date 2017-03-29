@@ -65,6 +65,21 @@ body {
   .home-page .container .track-card:hover {
     background-color: #424242; }
 
+.login-page {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .login-page .card {
+    color: #FFFFFF !important;
+    background-color: #616161 !important;
+    width: 350px;
+    padding: 20px; }
+    .login-page .card .text-input {
+      width: 100%;
+      margin: 0; }
+
 .user-profile-page .profile-card {
   padding: 16px;
   display: flex;
