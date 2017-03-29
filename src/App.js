@@ -10,6 +10,7 @@ import ArtistPage from './routes/Profile/Artist';
 import ArtistTracksPage from './routes/ArtistTracks';
 import UserPage from './routes/Profile/User';
 import TrackPage from './routes/Track';
+import PurchasePage from './routes/Purchase';
 
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
             <Route path='/profile/artist/tracks' component={ArtistTracksPage}/>
             <Route path='/profile/user' component={UserPage}/>
             <Route path='/track' component={TrackPage}/>
+            <Route path='/purchase' component={PurchasePage}/>
           </Router>
         </div>
       </div>
