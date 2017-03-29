@@ -8,7 +8,6 @@ export default class HomePage extends React.Component {
         return (
             <div className="page home-page">
                 <Paper zDepth={1} className="container">
-                    <HeaderCard/>
                     <TrackCard/>
                     <TrackCard/>
                     <TrackCard/>
