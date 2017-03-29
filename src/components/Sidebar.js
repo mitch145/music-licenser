@@ -78,6 +78,7 @@ export default class Sidebar extends React.Component {
                 <FlatButton className="button" label="Track (T)" href="/#/track"/>
                 <FlatButton className="button" label="Tracks" href="/#/"/>
                 <FlatButton className="button" label="My Profile" href="/#/profile/user"/>
+                <FlatButton className="button" label="Logout" href="/#/login"/>
             </div>
         )
         return (
