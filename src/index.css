@@ -62,6 +62,8 @@ body {
       justify-content: center; }
       .home-page .container .track-card .tag-container .tag {
         margin: 5px !important; }
+    .home-page .container .track-card .button {
+      margin: 10px; }
   .home-page .container .track-card:hover {
     background-color: #424242; }
 

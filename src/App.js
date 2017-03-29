@@ -4,11 +4,12 @@ import Sidebar from './components/Sidebar'
 import {Router, Route, hashHistory} from 'react-router';
 
 // Routes
-import HomePage from './routes/home';
-import LoginPage from './routes/login';
-import ArtistPage from './routes/profile/artist';
-import UserPage from './routes/profile/user';
-import TrackPage from './routes/track';
+import HomePage from './routes/Home';
+import LoginPage from './routes/Login';
+import ArtistPage from './routes/Profile/Artist';
+import ArtistTracksPage from './routes/ArtistTracks';
+import UserPage from './routes/Profile/User';
+import TrackPage from './routes/Track';
 
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
             <Route path='/' component={HomePage}/>
             <Route path='/login' component={LoginPage}/>
             <Route path='/profile/artist' component={ArtistPage}/>
+            <Route path='/profile/artist/tracks' component={ArtistTracksPage}/>
             <Route path='/profile/user' component={UserPage}/>
             <Route path='/track' component={TrackPage}/>
           </Router>

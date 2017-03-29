@@ -29,9 +29,8 @@ export default class TrackCard extends React.Component {
                 </div>
                 <div>
                     <RaisedButton className="button" label="View" primary={true}/>
-                    <RaisedButton className="button" label="Purchase" secondary={true}/>
+                    <RaisedButton className="button" label="Edit" secondary={true}/>
                 </div>
-
             </div>
         )
     }
