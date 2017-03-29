@@ -1,7 +1,6 @@
 import React from 'react'
 import Paper from 'material-ui/Paper';
 import TrackCard from './components/TrackCard';
-import HeaderCard from './components/HeaderCard';
 
 export default class HomePage extends React.Component {
     render() {
