@@ -85,13 +85,13 @@ export default class Sidebar extends React.Component {
                 {this.state.mobile
                     ? <AppBar
                             className="appbar"
-                            title="Material UI Boilerplate"
+                            title="Music-Licenser"
                             style={style.appbar}
                             onLeftIconButtonTouchTap={this.toggleOpenDrawer}
                             iconClassNameRight="muidocs-icon-navigation-expand-more"/>
                     : <AppBar
                         className="appbar"
-                        title="Material UI Boilerplate"
+                        title="Music-Licenser"
                         style={style.appbar}
                         iconElementRight={rightButtons}
                         showMenuIconButton={false}/>
