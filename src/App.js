@@ -6,6 +6,7 @@ import {Router, Route, hashHistory} from 'react-router';
 // Routes
 import HomePage from './routes/Home';
 import LoginPage from './routes/Login';
+import SignupPage from './routes/Signup';
 import ArtistPage from './routes/Profile/Artist';
 import ArtistTracksPage from './routes/ArtistTracks';
 import UserPage from './routes/Profile/User';
@@ -22,6 +23,7 @@ class App extends Component {
           <Router history={hashHistory}>
             <Route path='/' component={HomePage}/>
             <Route path='/login' component={LoginPage}/>
+            <Route path='/signup' component={SignupPage}/>
             <Route path='/profile/artist' component={ArtistPage}/>
             <Route path='/profile/artist/tracks' component={ArtistTracksPage}/>
             <Route path='/profile/user' component={UserPage}/>

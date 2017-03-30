@@ -1,9 +1,10 @@
 import React from 'react'
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 
-export default class HomePage extends React.Component {
+export default class LoginPage extends React.Component {
     render() {
         const style = {
             title: {
@@ -39,7 +40,10 @@ export default class HomePage extends React.Component {
                             inputStyle={style.textFieldInput}
                             hintText="password123"
                             floatingLabelText="Password"/>
-                        <RaisedButton href="/#/" style={style.button} label="Login" fullWidth={true} primary={true}/>
+                        <RaisedButton href="/#/" style={style.button} label="Login" fullWidth={true} secondary={true}/>
+                        <p className="signup">Don't have an account?&nbsp;
+                            <a href="/#/signup">Sign Up</a>
+                        </p>
                     </Paper>
                 </div>
             </div>
