@@ -5,13 +5,13 @@ import {Router, Route, hashHistory} from 'react-router';
 
 // Routes
 import HomePage from './routes/home';
-import LoginPage from './routes/Login';
-import SignupPage from './routes/Signup';
-import ArtistPage from './routes/Profile/Artist';
-import ArtistTracksPage from './routes/ArtistTracks';
-import UserPage from './routes/Profile/User';
-import TrackPage from './routes/Track';
-import PurchasePage from './routes/Purchase';
+import LoginPage from './routes/login';
+import SignupPage from './routes/signup';
+import ArtistPage from './routes/profile/artist';
+import ArtistTracksPage from './routes/artist-tracks';
+import UserPage from './routes/profile/user';
+import TrackPage from './routes/track';
+import PurchasePage from './routes/purchase';
 
 
 class App extends Component {
