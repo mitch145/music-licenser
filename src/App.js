@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar'
 import {Router, Route, hashHistory} from 'react-router';
 
 // Routes
-import HomePage from './routes/Home/';
+import HomePage from './routes/Home';
 import LoginPage from './routes/Login';
 import SignupPage from './routes/Signup';
 import ArtistPage from './routes/Profile/Artist';
