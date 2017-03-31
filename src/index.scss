@@ -102,6 +102,9 @@ a:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .circular-progress{
+        margin-bottom: 40px;
+    }
     .card {
         color: #FFFFFF !important;
         background-color: #616161 !important;

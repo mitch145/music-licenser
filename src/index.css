@@ -79,6 +79,8 @@ a:active {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .login-page .circular-progress {
+    margin-bottom: 40px; }
   .login-page .card {
     color: #FFFFFF !important;
     background-color: #616161 !important;
