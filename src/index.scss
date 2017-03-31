@@ -3,8 +3,11 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-a:hover, a:visited, a:link, a:active
-{
+
+a:hover,
+a:visited,
+a:link,
+a:active {
     text-decoration: none;
 }
 
@@ -83,7 +86,7 @@ a:hover, a:visited, a:link, a:active
                     margin: 5px !important;
                 }
             }
-            .button{
+            .button {
                 margin: 10px;
             }
         }
@@ -93,50 +96,66 @@ a:hover, a:visited, a:link, a:active
     }
 }
 
-.login-page{
+.login-page {
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .card{
+    .card {
         color: #FFFFFF !important;
         background-color: #616161 !important;
         width: 300px;
         padding: 20px;
-        .text-input{
+        .text-input {
             width: 100%;
             margin: 0;
         }
-        .signup{
+        .signup {
             text-align: center;
             margin-bottom: 0;
-            a{
+            a {
                 color: #8BC34A;
             }
         }
     }
 }
 
-.signup-page{
-    height: 80vh;
+.signup-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .card{
+    .title {
+        margin: 0;
+        font-weight: 300;
+        text-align: center;
+    }
+    .circular-progress{
+        margin-top: 40px;
+    }
+    .confirmation-card {
+        margin-top: 40px;
+        color: #616161 !important;
+        background-color: #8BC34A !important;
+        width: 400px;
+        text-align: center;
+        padding: 20px;
+    }
+    .card {
+        margin-top: 40px;
         color: #FFFFFF !important;
         background-color: #616161 !important;
         width: 400px;
         padding: 20px;
-        .text-input{
+        .text-input {
             width: 100%;
             margin: 0;
         }
-        .login{
+        .login {
             text-align: center;
             margin-bottom: 0;
-            a{
+            a {
                 color: #8BC34A;
             }
         }

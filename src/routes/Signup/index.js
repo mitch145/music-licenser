@@ -3,15 +3,25 @@ import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
+import CircularProgress from 'material-ui/CircularProgress';
 
 export default class SignUpPage extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            confirmationSent: false,
+            confirmationLoading: false
+        }
+    }
+    handleSubmit = () => {
+        this.setState({confirmationLoading: true})
+        setTimeout(() => {
+            this.setState({confirmationSent: true, confirmationLoading: false})
+        }, 3000)
+    }
     render() {
         const style = {
-            title: {
-                margin: 0,
-                fontWeight: 300,
-                textAlign: 'center'
-            },
+            title: {},
             textfield: {
                 width: '100%',
                 marginTop: -15
@@ -25,20 +35,27 @@ export default class SignUpPage extends React.Component {
         }
         return (
             <div className="signup-page">
-                <div>
+                    {this.state.confirmationLoading
+                        ? <CircularProgress className="circular-progress" color='#8BC34A'/>
+                        : ''}
+                    {this.state.confirmationSent
+                        ? <Paper zDepth={1} className="confirmation-card">
+                                <h2 className="title">Confirmation sent!</h2>
+                            </Paper>
+                        : ''}
                     <Paper zDepth={1} className="card">
-                        <h2 style={style.title}>Create a New Account</h2>
+                        <h2 className="title">Create a New Account</h2>
                         <TextField
                             className="text-input"
                             style={style.textfield}
                             inputStyle={style.textFieldInput}
-                            hintText="musiclicenser"
+                            hintText="John"
                             floatingLabelText="First Name"/>
                         <TextField
                             className="text-input"
                             style={style.textfield}
                             inputStyle={style.textFieldInput}
-                            hintText="musiclicenser"
+                            hintText="Smith"
                             floatingLabelText="Last Name"/>
                         <TextField
                             className="text-input"
@@ -50,7 +67,7 @@ export default class SignUpPage extends React.Component {
                             className="text-input"
                             style={style.textfield}
                             inputStyle={style.textFieldInput}
-                            hintText="musiclicenser"
+                            hintText="me@musiclicenser.com"
                             floatingLabelText="Email"/>
                         <TextField
                             className="text-input"
@@ -59,7 +76,7 @@ export default class SignUpPage extends React.Component {
                             hintText="password123"
                             floatingLabelText="Password"/>
                         <RaisedButton
-                            href="/#/"
+                            onClick={this.handleSubmit}
                             style={style.button}
                             label="Sign Up"
                             fullWidth={true}
@@ -68,7 +85,6 @@ export default class SignUpPage extends React.Component {
                             <a href="/#/login">Login</a>
                         </p>
                     </Paper>
-                </div>
             </div>
         )
     }

@@ -3,7 +3,10 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif; }
 
-a:hover, a:visited, a:link, a:active {
+a:hover,
+a:visited,
+a:link,
+a:active {
   text-decoration: none; }
 
 .pages {
@@ -91,12 +94,25 @@ a:hover, a:visited, a:link, a:active {
         color: #8BC34A; }
 
 .signup-page {
-  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .signup-page .title {
+    margin: 0;
+    font-weight: 300;
+    text-align: center; }
+  .signup-page .circular-progress {
+    margin-top: 40px; }
+  .signup-page .confirmation-card {
+    margin-top: 40px;
+    color: #616161 !important;
+    background-color: #8BC34A !important;
+    width: 400px;
+    text-align: center;
+    padding: 20px; }
   .signup-page .card {
+    margin-top: 40px;
     color: #FFFFFF !important;
     background-color: #616161 !important;
     width: 400px;
