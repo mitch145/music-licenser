@@ -1,7 +1,6 @@
 import React from 'react'
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 
 export default class LoginPage extends React.Component {
