@@ -1,4 +1,5 @@
 import 'whatwg-fetch';
+import { hashHistory } from 'react-router';
 
 export const login = (username, password) => {
   return function (dispatch) {
@@ -15,7 +16,7 @@ export const login = (username, password) => {
         .json()
         .then((response) => {
           dispatch({type: 'LOGIN_SUCCESS', token: response.token})
-          window.location = '/#/'
+          hashHistory.push('/');
         })
     }).catch((error) => {
       dispatch({type: 'LOGIN_FAILURE'})
@@ -26,6 +27,6 @@ export const login = (username, password) => {
 export const logout = () => {
   return function (dispatch) {
     dispatch({type: 'LOGOUT'})
-    window.location = '/#/login'
+    hashHistory.push('/login');
   }
 };
