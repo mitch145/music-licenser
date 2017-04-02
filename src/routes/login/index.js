@@ -1,22 +1,20 @@
 import React from 'react'
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import CircularProgress from 'material-ui/CircularProgress';
 
-export default class LoginPage extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            confirmationLoading: false
-        }
+import * as actions from '../../actions';
+
+class LoginPage extends React.Component {
+    constructor(props) {
+        super(props)
     }
     handleSubmit = () => {
-        this.setState({confirmationLoading: true})
-        setTimeout(() => {
-            this.setState({confirmationLoading: false})
-            window.location="/#/"
-        }, 3000)
+            this.props.actions.login();
     }
     render() {
         const style = {
@@ -38,7 +36,7 @@ export default class LoginPage extends React.Component {
         }
         return (
             <div className="login-page">
-                {this.state.confirmationLoading
+                {this.props.isLoggingIn
                     ? <CircularProgress className="circular-progress" color='#8BC34A'/>
                     : ''}
                 <Paper zDepth={1} className="card">
@@ -69,3 +67,13 @@ export default class LoginPage extends React.Component {
         )
     }
 };
+
+const mapStateToProps = (state, ownProps) => {
+  return state;
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  }
+};
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);

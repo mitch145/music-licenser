@@ -75,9 +75,9 @@ a:active {
 
 .login-page {
   height: 80vh;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center; }
   .login-page .circular-progress {
     margin-bottom: 40px; }
