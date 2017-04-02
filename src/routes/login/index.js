@@ -2,12 +2,12 @@ import React from 'react'
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
+import * as actions from '../../actions';
+
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import CircularProgress from 'material-ui/CircularProgress';
-
-import * as actions from '../../actions';
 
 class LoginPage extends React.Component {
     constructor(props) {

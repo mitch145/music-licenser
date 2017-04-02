@@ -1,18 +1,25 @@
 import React from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+
+import * as actions from '../actions';
 
 // Material UI Components
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 
-export default class Sidebar extends React.Component {
+class Sidebar extends React.Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             open: null,
             docked: null,
             mobile: null
         }
+    }
+    handleLogout = () => {
+        this.props.actions.logout()
     }
     toggleOpenDrawer = () => {
         if (!this.state.mobile) {
@@ -79,7 +86,7 @@ export default class Sidebar extends React.Component {
                 <FlatButton className="button" label="All Tracks" href="/#/"/>
                 <FlatButton className="button" label="My Tracks" href="/#/profile/artist/tracks"/>
                 <FlatButton className="button" label="My Profile" href="/#/profile/user"/>
-                <FlatButton className="button" label="Logout" href="/#/login"/>
+                <FlatButton className="button" label="Logout" onTouchTap={this.handleLogout}/>
             </div>
         )
         return (
@@ -102,3 +109,13 @@ export default class Sidebar extends React.Component {
         )
     }
 };
+
+const mapStateToProps = (state, ownProps) => {
+  return state;
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  }
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);

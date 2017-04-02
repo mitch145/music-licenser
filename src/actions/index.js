@@ -15,6 +15,7 @@ export const login = (username, password) => {
         .json()
         .then((response) => {
           dispatch({type: 'LOGIN_SUCCESS', token: response.token})
+          window.location = '/#/'
         })
     }).catch((error) => {
       dispatch({type: 'LOGIN_FAILURE'})
@@ -23,5 +24,8 @@ export const login = (username, password) => {
 };
 
 export const logout = () => {
-  return {type: 'LOGOUT'};
+  return function (dispatch) {
+    dispatch({type: 'LOGOUT'})
+    window.location = '/#/login'
+  }
 };
