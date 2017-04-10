@@ -95,7 +95,7 @@ class Navbar extends React.Component {
                         label="Artist Profile (T)"
                         href="/#/profile/artist"/>
                     <FlatButton className="button" label="Track (T)" href="/#/track"/>
-                    <FlatButton className="button" label="All Tracks" href="/#/"/>
+                    <FlatButton className="button" label="Recommended" href="/#/"/>
                     {this.props.token
                         ? <FlatButton className="button" label="My Tracks" href="/#/profile/artist/tracks"/>
                         : ''
