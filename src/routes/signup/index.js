@@ -3,20 +3,29 @@ import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import CircularProgress from 'material-ui/CircularProgress';
+import * as actions from '../../actions';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 
-export default class SignUpPage extends React.Component {
+
+class SignUpPage extends React.Component {
     constructor() {
         super()
         this.state = {
-            confirmationSent: false,
-            confirmationLoading: false
+            username: '',
+            password: '',
+            firstname: '',
+            lastname: '',
+            email: ''
         }
     }
     handleSubmit = () => {
-        this.setState({confirmationLoading: true})
-        setTimeout(() => {
-            this.setState({confirmationSent: true, confirmationLoading: false})
-        }, 3000)
+        console.log(this.state)
+        this.props.actions.signup(this.state.username, this.state.password, this.state.firstname, this.state.lastname,
+        this.state.email);
+    }
+    handleChange = (event) => {
+        this.setState({[event.target.name]: event.target.value})
     }
     render() {
         const style = {
@@ -48,31 +57,40 @@ export default class SignUpPage extends React.Component {
                             className="text-input"
                             style={style.textfield}
                             inputStyle={style.textFieldInput}
-                            hintText="John"
+                            hintText="firstname"
+                            name="firstname"
+                            onChange={this.handleChange}
                             floatingLabelText="First Name"/>
                         <TextField
                             className="text-input"
                             style={style.textfield}
                             inputStyle={style.textFieldInput}
                             hintText="Smith"
+                            name="lastname"
+                            onChange={this.handleChange}
                             floatingLabelText="Last Name"/>
                         <TextField
                             className="text-input"
                             style={style.textfield}
                             inputStyle={style.textFieldInput}
                             hintText="musiclicenser"
+                            name="username"
+                            onChange={this.handleChange}
                             floatingLabelText="Username"/>
                         <TextField
                             className="text-input"
                             style={style.textfield}
                             inputStyle={style.textFieldInput}
                             hintText="me@musiclicenser.com"
+                            onChange={this.handleChange}
+                            name="email"
                             floatingLabelText="Email"/>
                         <TextField
                             className="text-input"
                             style={style.textfield}
                             inputStyle={style.textFieldInput}
                             hintText="password123"
+                            name="password"
                             floatingLabelText="Password"/>
                         <RaisedButton
                             onClick={this.handleSubmit}
@@ -88,3 +106,12 @@ export default class SignUpPage extends React.Component {
         )
     }
 };
+const mapStateToProps = (state, ownProps) => {
+  return state;
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    actions: bindActionCreators(actions, dispatch)
+  }
+};
+export default connect(mapStateToProps, mapDispatchToProps)(SignUpPage);
