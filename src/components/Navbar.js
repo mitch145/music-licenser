@@ -7,6 +7,9 @@ import * as actions from '../actions';
 // Material UI Components
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
+import Badge from 'material-ui/Badge';
+import IconButton from 'material-ui/IconButton';
+import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
 
 class Navbar extends React.Component {
 
@@ -19,7 +22,10 @@ class Navbar extends React.Component {
         }
     }
     handleLogout = () => {
-        this.props.actions.logout()
+        this
+            .props
+            .actions
+            .logout()
     }
     toggleOpenDrawer = () => {
         if (!this.state.mobile) {
@@ -76,46 +82,42 @@ class Navbar extends React.Component {
                 marginTop: 0
             }
         }
-        const rightButtons = (
-            <div>
-                <FlatButton
-                    className="button"
-                    label="Artist Profile (T)"
-                    href="/#/profile/artist"/>
-                <FlatButton className="button" label="Track (T)" href="/#/track"/>
-                <FlatButton className="button" label="All Tracks" href="/#/"/>
-                <FlatButton className="button" label="My Tracks" href="/#/profile/artist/tracks"/>
-                <FlatButton className="button" label="My Profile" href="/#/profile/user"/>
-                {this.props.token ? <FlatButton className="button" label="Logout" onTouchTap={this.handleLogout}/> : <FlatButton className="button" label="Login" href="/#/login"/>}
-            </div>
-        )
         return (
             <div>
-                {this.state.mobile
-                    ? <AppBar
-                            className="appbar"
-                            title="Music-Licenser"
-                            style={style.appbar}
-                            onLeftIconButtonTouchTap={this.toggleOpenDrawer}
-                            iconClassNameRight="muidocs-icon-navigation-expand-more"/>
-                    : <AppBar
-                        className="appbar"
-                        title="Music-Licenser"
-                        style={style.appbar}
-                        iconElementRight={rightButtons}
-                        showMenuIconButton={false}/>
-}
+                <AppBar
+                    className="appbar"
+                    title="Music-Licenser"
+                    style={style.appbar}
+                    showMenuIconButton={false}>
+                    <FlatButton
+                        className="button"
+                        label="Artist Profile (T)"
+                        href="/#/profile/artist"/>
+                    <FlatButton className="button" label="Track (T)" href="/#/track"/>
+                    <FlatButton className="button" label="All Tracks" href="/#/"/>
+                    <FlatButton
+                        className="button"
+                        label="My Tracks"
+                        href="/#/profile/artist/tracks"/>
+                    <FlatButton className="button" label="My Profile" href="/#/profile/user"/>
+                    <Badge className="badge" badgeContent={4} secondary={true} badgeStyle={{top: 10, right: 10}}>
+                        <NotificationsIcon/>
+                    </Badge>
+                    {this.props.token
+                        ? <FlatButton className="button" label="Logout" onTouchTap={this.handleLogout}/>
+                        : <FlatButton className="button" label="Login" href="/#/login"/>}
+                </AppBar>
             </div>
         )
     }
 };
 
 const mapStateToProps = (state, ownProps) => {
-  return state;
+    return state;
 };
 const mapDispatchToProps = (dispatch) => {
-  return {
-    actions: bindActionCreators(actions, dispatch)
-  }
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    }
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

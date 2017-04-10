@@ -15,9 +15,12 @@ a:active {
 .page {
   padding: 40px; }
 
-.appbar .button {
-  color: #FFFFFF !important;
-  margin-top: 5px !important; }
+.appbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .appbar .button {
+    color: #FFFFFF !important; }
 
 .home-page .container {
   border-radius: 3px !important; }

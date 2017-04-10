@@ -22,9 +22,11 @@ a:active {
 
 // Components Styles
 .appbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     .button {
         color: #FFFFFF !important;
-        margin-top: 5px !important;
     }
 }
 
