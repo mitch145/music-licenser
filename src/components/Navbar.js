@@ -105,7 +105,8 @@ class Navbar extends React.Component {
                     </Badge>
                     {this.props.token
                         ? <FlatButton className="button" label="Logout" onTouchTap={this.handleLogout}/>
-                        : <FlatButton className="button" label="Login" href="/#/login"/>}
+                        : <FlatButton className="button" label="Login" href="/#/login"/>
+                    }
                 </AppBar>
             </div>
         )
