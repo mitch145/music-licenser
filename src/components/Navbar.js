@@ -90,12 +90,11 @@ class Navbar extends React.Component {
                     title="Music-Licenser"
                     style={style.appbar}
                     showMenuIconButton={false}>
-                    <FlatButton
-                        className="button"
-                        label="Artist Profile (T)"
-                        href="/#/profile/artist"/>
-                    <FlatButton className="button" label="Track (T)" href="/#/track"/>
-                    <FlatButton className="button" label="Recommended" href="/#/"/>
+                    <FlatButton className="button" label="Popular" href="/#/"/>
+                    {this.props.token
+                        ? <FlatButton className="button" label="Recommended" href="/#/"/>
+                        : ''
+                    }
                     {this.props.token
                         ? <FlatButton className="button" label="My Tracks" href="/#/profile/artist/tracks"/>
                         : ''
