@@ -38,13 +38,13 @@ export const login = (username, password) => {
 export const signup = (username, password, firstname, lastname, email) => {
   return function (dispatch) {
     dispatch({type: 'LOGIN_REQUEST'});
-    fetch('http://localhost:4567/users', {
+    fetch('http://localhost:4567/users',{
       method: 'post',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({username: username, password: password, firstname: firstname, lastname: lastname, email:email})
+      body: JSON.stringify({username: 'mitch1458', password: 'snickers145', firstname: 'Mitch', lastname: 'Ball', email: 'me@mitchball4.com'})
     }).then((response) => {
       console.log(response)
       // Success
@@ -52,7 +52,6 @@ export const signup = (username, password, firstname, lastname, email) => {
         response
           .json()
           .then((response) => {
-            dispatch({type: 'SIGNUP_SUCCESS', token: response.token})
             hashHistory.push('/');
           })
         // Failure
@@ -60,11 +59,10 @@ export const signup = (username, password, firstname, lastname, email) => {
         response
           .json()
           .then((response) => {
-            dispatch({type: 'SIGNUP_FAILURE', error: response.message})
+            console.log(response)
           })
       }
     }).catch((error) => {
-      dispatch({type: 'SIGNUP_FAILURE', error: error.message})
     })
   };
 };

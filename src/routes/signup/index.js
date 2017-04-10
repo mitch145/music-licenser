@@ -21,8 +21,7 @@ class SignUpPage extends React.Component {
     }
     handleSubmit = () => {
         console.log(this.state)
-        this.props.actions.signup(this.state.username, this.state.password, this.state.firstname, this.state.lastname,
-        this.state.email);
+        this.props.actions.signup(this.state.username, this.state.password, this.state.firstname, this.state.lastname, this.state.email);
     }
     handleChange = (event) => {
         this.setState({[event.target.name]: event.target.value})
@@ -90,7 +89,9 @@ class SignUpPage extends React.Component {
                             style={style.textfield}
                             inputStyle={style.textFieldInput}
                             hintText="password123"
+                            type="password"
                             name="password"
+                            onChange={this.handleChange}
                             floatingLabelText="Password"/>
                         <RaisedButton
                             onClick={this.handleSubmit}
