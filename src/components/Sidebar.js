@@ -86,7 +86,7 @@ class Sidebar extends React.Component {
                 <FlatButton className="button" label="All Tracks" href="/#/"/>
                 <FlatButton className="button" label="My Tracks" href="/#/profile/artist/tracks"/>
                 <FlatButton className="button" label="My Profile" href="/#/profile/user"/>
-                <FlatButton className="button" label="Logout" onTouchTap={this.handleLogout}/>
+                {this.props.token ? <FlatButton className="button" label="Logout" onTouchTap={this.handleLogout}/> : <FlatButton className="button" label="Login" href="/#/login"/>}
             </div>
         )
         return (
