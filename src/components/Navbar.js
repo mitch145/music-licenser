@@ -10,6 +10,7 @@ import FlatButton from 'material-ui/FlatButton';
 import Badge from 'material-ui/Badge';
 import IconButton from 'material-ui/IconButton';
 import ShoppingCartIcon from 'material-ui/svg-icons/action/shopping-cart';
+import AccountCircle from 'material-ui/svg-icons/action/account-circle';
 
 class Navbar extends React.Component {
 
@@ -95,14 +96,17 @@ class Navbar extends React.Component {
                         href="/#/profile/artist"/>
                     <FlatButton className="button" label="Track (T)" href="/#/track"/>
                     <FlatButton className="button" label="All Tracks" href="/#/"/>
-                    <FlatButton
-                        className="button"
-                        label="My Tracks"
-                        href="/#/profile/artist/tracks"/>
-                    <FlatButton className="button" label="My Profile" href="/#/profile/user"/>
-                    <Badge className="badge" badgeContent={4} secondary={true} badgeStyle={{top: 10, right: 10}}>
+                    {this.props.token
+                        ? <FlatButton className="button" label="My Tracks" href="/#/profile/artist/tracks"/>
+                        : ''
+                    }
+                    <Badge className="badge" badgeContent={0} secondary={true} badgeStyle={{top: 10, right: 10}}>
                         <ShoppingCartIcon/>
                     </Badge>
+                    {this.props.token
+                        ? <FlatButton className="button" label="My Profile" href="/#/profile/user" icon={<AccountCircle/>}/>
+                        : ''
+                    }
                     {this.props.token
                         ? <FlatButton className="button" label="Logout" onTouchTap={this.handleLogout}/>
                         : <FlatButton className="button" label="Login" href="/#/login"/>
