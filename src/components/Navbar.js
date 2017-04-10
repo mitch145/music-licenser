@@ -8,7 +8,7 @@ import * as actions from '../actions';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 
-class Sidebar extends React.Component {
+class Navbar extends React.Component {
 
     constructor(props) {
         super(props)
@@ -118,4 +118,4 @@ const mapDispatchToProps = (dispatch) => {
     actions: bindActionCreators(actions, dispatch)
   }
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import Sidebar from './components/Sidebar'
+import Navbar from './components/Navbar'
 import {Router, Route, hashHistory} from 'react-router';
 
 // Routes
@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Sidebar/>
+        <Navbar/>
         <div className="pages">
           <Router history={hashHistory}>
             <Route path='/' component={HomePage}/>
