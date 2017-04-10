@@ -21,7 +21,6 @@ class LoginPage extends React.Component {
         this.props.actions.login(this.state.username, this.state.password);
     }
     handleChange = (event) => {
-        console.log(event)
         this.setState({[event.target.name]: event.target.value})
     }
     render() {

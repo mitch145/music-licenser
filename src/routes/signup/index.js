@@ -20,7 +20,6 @@ class SignUpPage extends React.Component {
         }
     }
     handleSubmit = () => {
-        console.log(this.state)
         this.props.actions.signup(this.state.username, this.state.password, this.state.firstname, this.state.lastname, this.state.email);
     }
     handleChange = (event) => {
