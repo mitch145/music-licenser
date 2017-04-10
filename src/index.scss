@@ -105,6 +105,10 @@ a:active {
     .circular-progress{
         margin-bottom: 40px;
     }
+    .errors{
+        color: #F44336;
+        font-weight: 300;
+    }
     .card {
         color: #FFFFFF !important;
         background-color: #616161 !important;
@@ -113,6 +117,7 @@ a:active {
         .text-input {
             width: 100%;
             margin: 0;
+            margin-top: -15;
         }
         .signup {
             text-align: center;
