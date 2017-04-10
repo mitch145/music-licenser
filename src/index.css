@@ -22,59 +22,36 @@ a:active {
   .appbar .button {
     color: #FFFFFF !important; }
 
-.home-page .container {
-  border-radius: 3px !important; }
-  .home-page .container .header {
-    background-color: #252525;
-    border-radius: 3px 3px 0 0;
-    color: #FFFFFF;
-    padding: 16px;
-    margin: 0px;
-    font-size: 14px;
-    font-weight: 100;
-    text-transform: uppercase; }
-  .home-page .container .track-card {
+.home-page .container .track-container {
+  margin: 10px; }
+  .home-page .container .track-container .track-card {
     color: #FFFFFF;
     background-color: #616161;
     border-top: 1px solid;
     border-color: #424242;
-    cursor: pointer;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 8px 16px 8px 8px; }
-    .home-page .container .track-card .left-container {
+    .home-page .container .track-container .track-card .left-container {
       display: flex;
       align-items: center;
       flex-direction: row; }
-      .home-page .container .track-card .left-container .album-artwork {
+      .home-page .container .track-container .track-card .left-container .album-artwork {
         max-height: 120px; }
-      .home-page .container .track-card .left-container .track-name {
+      .home-page .container .track-container .track-card .left-container .track-name {
         font-size: 28px;
         font-weight: 500;
         margin: 0;
         padding: 0 0 0 12px; }
-      .home-page .container .track-card .left-container .artist-name {
+      .home-page .container .track-container .track-card .left-container .artist-name {
         font-size: 24px;
         font-weight: 300;
         margin: 0;
         padding: 0 0 0 12px; }
-    .home-page .container .track-card .bpm {
-      font-size: 20px;
-      font-weight: 300;
-      margin: 0;
-      padding: 0 0 0 12px; }
-    .home-page .container .track-card .tag-container {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center; }
-      .home-page .container .track-card .tag-container .tag {
-        margin: 5px !important; }
-    .home-page .container .track-card .button {
+    .home-page .container .track-container .track-card .button {
       margin: 10px; }
-  .home-page .container .track-card:hover {
-    background-color: #424242; }
 
 .login-page {
   height: 80vh;

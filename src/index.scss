@@ -32,68 +32,42 @@ a:active {
 
 .home-page {
     .container {
-        border-radius: 3px !important;
-        .header {
-            background-color: #252525;
-            border-radius: 3px 3px 0 0;
-            color: #FFFFFF;
-            padding: 16px;
-            margin: 0px;
-            font-size: 14px;
-            font-weight: 100;
-            text-transform: uppercase;
-        }
-        .track-card {
-            color: #FFFFFF;
-            background-color: #616161;
-            border-top: 1px solid;
-            border-color: #424242;
-            cursor: pointer;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            padding: 8px 16px 8px 8px;
-            .left-container {
+        .track-container {
+            margin: 10px;
+            .track-card {
+                color: #FFFFFF;
+                background-color: #616161;
+                border-top: 1px solid;
+                border-color: #424242;
                 display: flex;
-                align-items: center;
                 flex-direction: row;
-                .album-artwork {
-                    max-height: 120px;
+                align-items: center;
+                justify-content: space-between;
+                padding: 8px 16px 8px 8px;
+                .left-container {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    .album-artwork {
+                        max-height: 120px;
+                    }
+                    .track-name {
+                        font-size: 28px;
+                        font-weight: 500;
+                        margin: 0;
+                        padding: 0 0 0 12px;
+                    }
+                    .artist-name {
+                        font-size: 24px;
+                        font-weight: 300;
+                        margin: 0;
+                        padding: 0 0 0 12px;
+                    }
                 }
-                .track-name {
-                    font-size: 28px;
-                    font-weight: 500;
-                    margin: 0;
-                    padding: 0 0 0 12px;
-                }
-                .artist-name {
-                    font-size: 24px;
-                    font-weight: 300;
-                    margin: 0;
-                    padding: 0 0 0 12px;
-                }
-            }
-            .bpm {
-                font-size: 20px;
-                font-weight: 300;
-                margin: 0;
-                padding: 0 0 0 12px;
-            }
-            .tag-container {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: center;
-                .tag {
-                    margin: 5px !important;
+                .button {
+                    margin: 10px;
                 }
             }
-            .button {
-                margin: 10px;
-            }
-        }
-        .track-card:hover {
-            background-color: #424242;
         }
     }
 }
@@ -104,10 +78,10 @@ a:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .circular-progress{
+    .circular-progress {
         margin-bottom: 40px;
     }
-    .errors{
+    .errors {
         color: #F44336;
         font-weight: 300;
     }
@@ -141,7 +115,7 @@ a:active {
         font-weight: 300;
         text-align: center;
     }
-    .circular-progress{
+    .circular-progress {
         margin-top: 40px;
     }
     .confirmation-card {

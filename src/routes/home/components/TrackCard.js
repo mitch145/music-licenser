@@ -1,12 +1,16 @@
 import React from 'react'
 import Chip from 'material-ui/Chip';
 import RaisedButton from 'material-ui/RaisedButton';
+import ShoppingCartIcon from 'material-ui/svg-icons/action/shopping-cart';
+import LinearProgress from 'material-ui/LinearProgress';
 
 export default class TrackCard extends React.Component {
     render() {
-        const handleTouchTap = () => {}
+        const handleAddToCart = () => {
+            console.log('Add to cart')
+        }
         return (
-            <a href="/#/track">
+            <div className="track-container">
                 <div className="track-card">
                     <div className="left-container">
                         <img className="album-artwork" src="http://placehold.it/500x500" alt="Album"/>
@@ -15,29 +19,17 @@ export default class TrackCard extends React.Component {
                             <p className="artist-name">Mitch Ball</p>
                         </div>
                     </div>
-                    <p className="bpm">120bpm</p>
                     <div>
-                        <div className="tag-container">
-                            <Chip onTouchTap={handleTouchTap} className="tag">West Coast Rap</Chip>
-                            <Chip onTouchTap={handleTouchTap} className="tag">Latin Rap</Chip>
-                            <Chip onTouchTap={handleTouchTap} className="tag">Text Chip</Chip>
-                        </div>
-                        <div className="tag-container">
-                            <Chip onTouchTap={handleTouchTap} className="tag">Gangsta Rap</Chip>
-                            <Chip onTouchTap={handleTouchTap} className="tag">Alternative Rap</Chip>
-                            <Chip onTouchTap={handleTouchTap} className="tag">Hardcore Rap</Chip>
-                        </div>
-                    </div>
-                    <div>
-                        <RaisedButton className="button" href="/#/track" label="View" primary={true}/>
                         <RaisedButton
                             className="button"
-                            href="/#/purchase"
-                            label="Purchase"
+                            label="Add To Cart"
+                            labelPosition='before'
+                            icon={< ShoppingCartIcon />}
                             secondary={true}/>
                     </div>
                 </div>
-            </a>
+                <LinearProgress mode="determinate" color='#8BC34A' value={50}/>
+            </div>
         )
     }
 };
