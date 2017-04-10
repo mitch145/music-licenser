@@ -11,6 +11,9 @@ import Badge from 'material-ui/Badge';
 import IconButton from 'material-ui/IconButton';
 import ShoppingCartIcon from 'material-ui/svg-icons/action/shopping-cart';
 import AccountCircle from 'material-ui/svg-icons/action/account-circle';
+import Popover from 'material-ui/Popover';
+import Menu from 'material-ui/Menu';
+import MenuItem from 'material-ui/MenuItem';
 
 class Navbar extends React.Component {
 
@@ -18,6 +21,8 @@ class Navbar extends React.Component {
         super(props)
         this.state = {
             open: null,
+            popoverOpen: false,
+            anchorEl: null,
             docked: null,
             mobile: null
         }
@@ -34,6 +39,13 @@ class Navbar extends React.Component {
         }
         this.setState({
             open: !this.state.open
+        })
+    }
+    toggleOpenPopover = (event) => {
+        event.preventDefault();
+        this.setState({
+            popoverOpen: !this.state.popoverOpen,
+            anchorEl: event.currentTarget
         })
     }
     setSmall = () => {
@@ -102,14 +114,28 @@ class Navbar extends React.Component {
                     <Badge className="badge" badgeContent={0} secondary={true} badgeStyle={{top: 10, right: 10}}>
                         <ShoppingCartIcon/>
                     </Badge>
-                    {this.props.token
-                        ? <FlatButton className="button" label="My Profile" href="/#/profile/user" icon={<AccountCircle/>}/>
+                    {this.props.token 
+                        ? <FlatButton className="button" label="My Profile" onTouchTap={this.toggleOpenPopover} icon={<AccountCircle/>}>
+                            <Popover
+                                open={this.state.popoverOpen}
+                                anchorEl={this.state.anchorEl}
+                                anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
+                                targetOrigin={{horizontal: 'left', vertical: 'top'}}
+                                onRequestClose={this.handleRequestClose}
+                                >
+                                <Menu>
+                                    <MenuItem primaryText="Settings" />
+                                    <MenuItem primaryText="Logout" onTouchTap={this.handleLogout} />
+                                </Menu>
+                            </Popover>
+                        </FlatButton>
                         : ''
                     }
-                    {this.props.token
-                        ? <FlatButton className="button" label="Logout" onTouchTap={this.handleLogout}/>
+                    {this.props.token 
+                        ? ''
                         : <FlatButton className="button" label="Login" href="/#/login"/>
                     }
+                    
                 </AppBar>
             </div>
         )
