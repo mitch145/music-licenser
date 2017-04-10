@@ -9,7 +9,7 @@ import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 import Badge from 'material-ui/Badge';
 import IconButton from 'material-ui/IconButton';
-import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
+import ShoppingCartIcon from 'material-ui/svg-icons/action/shopping-cart';
 
 class Navbar extends React.Component {
 
@@ -101,7 +101,7 @@ class Navbar extends React.Component {
                         href="/#/profile/artist/tracks"/>
                     <FlatButton className="button" label="My Profile" href="/#/profile/user"/>
                     <Badge className="badge" badgeContent={4} secondary={true} badgeStyle={{top: 10, right: 10}}>
-                        <NotificationsIcon/>
+                        <ShoppingCartIcon/>
                     </Badge>
                     {this.props.token
                         ? <FlatButton className="button" label="Logout" onTouchTap={this.handleLogout}/>
